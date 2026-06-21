@@ -1,7 +1,9 @@
 <section class="beats-grid">
     <div class="grid-container">
-        @foreach ($beats as $beat)
+        @forelse ($beats as $beat)
             @include('components.beat-card', ['beat' => $beat])
-        @endforeach
+        @empty
+            <p class="no-beats">No hay beats disponibles.</p>
+        @endforelse
     </div>
 </section>

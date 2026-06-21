@@ -1,0 +1,33 @@
+/* Main Layout */
+main {
+    margin-top: 80px;
+    margin-bottom: 180px;
+    min-height: calc(100vh - 260px);
+    padding: 2rem 0;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 60px;
+        margin-bottom: 90px;
+        padding: 1rem 0;
+    }
+}
