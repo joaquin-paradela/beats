@@ -1,0 +1,118 @@
+/* Audio Player */
+.player-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 0.75rem 2rem;
+    z-index: 1010;
+    display: flex;
+    justify-content: center;
+}
+
+.player-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.player-play-btn {
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.player-play-btn:hover {
+    background-color: #d62828;
+}
+
+.player-play-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+}
+
+.player-info {
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.player-info .beat-name {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-info .beat-genre {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.player-progress {
+    flex: 1;
+    min-width: 100px;
+}
+
+.progress-bar-custom {
+    background-color: var(--border-color);
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar-custom::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.player-time {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    flex: 0 0 50px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .player-sticky {
+        padding: 0.5rem 1rem;
+    }
+
+    .player-container {
+        gap: 0.75rem;
+    }
+
+    .player-info {
+        flex: 0 0 auto;
+    }
+
+    .player-play-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .player-play-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}
